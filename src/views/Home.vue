@@ -1,18 +1,29 @@
-
 <template>
   <div class="home">
     <div class="feature-card">
       <router-link to="/movie/tt0409591">
-        <img src="https://m.media-amazon.com/images/M/MV5BZmQ5NGFiNWEtMmMyMC00MDdiLTg4YjktOGY5Yzc2MDUxMTE1XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg" alt="Naruto Poster" class="featured-img" />
-        <div class="detail">
+        <img
+          src="../assets/img/main_img.png"
+          alt="Naruto Poster"
+          class="featured-img"
+        />
+        <!-- <div class="detail">
           <h3>Naruto</h3>
-          <p>Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming the Hokage, the village's leader and strongest ninja.</p>
-        </div>
+          <p>
+            Naruto Uzumaki, a mischievous adolescent ninja, struggles as he
+            searches for recognition and dreams of becoming the Hokage, the
+            village's leader and strongest ninja.
+          </p>
+        </div> -->
       </router-link>
     </div>
 
     <form @submit.prevent="SearchMovies()" class="search-box">
-      <input type="text" placeholder="What are you looking for?" v-model="search" />
+      <input
+        type="text"
+        placeholder="What are you looking for?"
+        v-model="search"
+      />
       <input type="submit" value="Search" />
     </form>
 
@@ -34,29 +45,30 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import env from '@/env.js'
+import { ref } from "vue";
+import env from "@/env.js";
+
 export default {
-  setup () {
+  setup() {
     const search = ref("");
     const movies = ref([]);
     const SearchMovies = () => {
       if (search.value != "") {
         fetch(`http://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
-          .then(response => response.json())
-          .then(data => {
+          .then((response) => response.json())
+          .then((data) => {
             movies.value = data.Search;
             search.value = "";
           });
       }
-    }
+    };
     return {
       search,
       movies,
-      SearchMovies
-    }
-  }
-}
+      SearchMovies,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -66,7 +78,7 @@ export default {
     .featured-img {
       display: block;
       width: 100%;
-      height: 300px;
+      height: 450px;
       object-fit: cover;
       position: relative;
       z-index: 0;
@@ -80,11 +92,11 @@ export default {
       padding: 16px;
       z-index: 1;
       h3 {
-        color:#FFF;
+        color: #fff;
         margin-bottom: 16px;
       }
       p {
-        color: #FFF;
+        color: #fff;
       }
     }
   }
@@ -102,7 +114,7 @@ export default {
       background: none;
       &[type="text"] {
         width: 100%;
-        color: #FFF;
+        color: #fff;
         background-color: #496583;
         font-size: 20px;
         padding: 10px 16px;
@@ -119,15 +131,15 @@ export default {
       &[type="submit"] {
         width: 100%;
         max-width: 300px;
-        background-color: #42B883;
+        background-color: #42b883;
         padding: 16px;
         border-radius: 8px;
-        color: #FFF;
+        color: #fff;
         font-size: 20px;
         text-transform: uppercase;
         transition: 0.4s;
         &:active {
-          background-color: #3B8070;
+          background-color: #3b8070;
         }
       }
     }
@@ -156,8 +168,8 @@ export default {
           .type {
             position: absolute;
             padding: 8px 16px;
-            background-color: #42B883;
-            color: #FFF;
+            background-color: #42b883;
+            color: #fff;
             bottom: 16px;
             left: 0px;
             text-transform: capitalize;
@@ -169,11 +181,11 @@ export default {
           flex: 1 1 100%;
           border-radius: 0px 0px 8px 8px;
           .year {
-            color: #AAA;
+            color: #aaa;
             font-size: 14px;
           }
           h3 {
-            color: #FFF;
+            color: #fff;
             font-weight: 600;
             font-size: 18px;
           }

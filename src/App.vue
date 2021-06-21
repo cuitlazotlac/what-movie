@@ -1,9 +1,9 @@
 <template>
-<header>
+<!-- <header>
     <router-link to="/">
         <h1><span>Vue</span>movies</h1>
     </router-link>
-</header>
+</header> -->
 <main>
   <router-view />
 </main>
@@ -14,7 +14,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Monda', sans-serif;
 
   &::selection{
     background: transparentize($color: #42B883, $amount: 0.5);
@@ -22,7 +23,7 @@
   }
 
   body {
-    background-color: #35495E;
+    background-color: #141414;
   }
 
   a {
