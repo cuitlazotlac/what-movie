@@ -2,11 +2,11 @@
   <div class="home">
     <div class="feature-card">
       <router-link to="/movie/tt0409591">
-        <img
+        <!-- <img
           src="../assets/img/main_img.png"
           alt="Naruto Poster"
           class="featured-img"
-        />
+        /> -->
         <!-- <div class="detail">
           <h3>Naruto</h3>
           <p>
@@ -114,15 +114,15 @@ export default {
       background: none;
       &[type="text"] {
         width: 100%;
-        color: #fff;
-        background-color: #496583;
+        color: #181829;
+        background-color: #ffffff;
         font-size: 20px;
         padding: 10px 16px;
         border-radius: 8px;
         margin-bottom: 15px;
         transition: 0.4s;
         &::placeholder {
-          color: #f3f3f3;
+          color: #f6c56a6b;
         }
         &:focus {
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -131,15 +131,15 @@ export default {
       &[type="submit"] {
         width: 100%;
         max-width: 300px;
-        background-color: #42b883;
+        background-color: #181829;
         padding: 16px;
         border-radius: 8px;
-        color: #fff;
+        color: #f6c46a;
         font-size: 20px;
         text-transform: uppercase;
         transition: 0.4s;
         &:active {
-          background-color: #3b8070;
+          background-color: #181829;
         }
       }
     }
@@ -150,7 +150,7 @@ export default {
     margin: 0px 8px;
     .movie {
       max-width: 50%;
-      flex: 1 1 50%;
+      flex: 1 1 25%;
       padding: 16px 8px;
       .movie-link {
         display: flex;
@@ -162,13 +162,17 @@ export default {
           img {
             display: block;
             width: 100%;
-            height: 275px;
+            border-radius: 8px 8px 0px 0px;
+            // width: 28%;
+            // height: 275px;
             object-fit: cover;
           }
           .type {
             position: absolute;
             padding: 8px 16px;
-            background-color: #42b883;
+            // background-color: #F6C46A;
+            background-color: #181829;
+            border-radius: 0px 8px 8px 0px;
             color: #fff;
             bottom: 16px;
             left: 0px;
@@ -176,12 +180,13 @@ export default {
           }
         }
         .detail {
-          background-color: #496583;
+          background-color: #181829;
           padding: 16px 8px;
           flex: 1 1 100%;
           border-radius: 0px 0px 8px 8px;
           .year {
-            color: #aaa;
+            color: #f6c46a;
+            font-weight: 200;
             font-size: 14px;
           }
           h3 {
