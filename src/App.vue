@@ -61,7 +61,9 @@ h1 {
 
 .header {
   a {
-    color: red;
+    color: #f6c46a;
+    font-size: 22px;
+    font-weight: 900;
   }
 }
 
