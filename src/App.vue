@@ -1,8 +1,14 @@
 <template>
-  <header>
+  <header className="header">
     <router-link to="/">
       <!-- <img src="./assets/img/main_img.png" /> -->
-      <h1><span>Vue</span>movies</h1>
+      <a>
+        <img className="icon" src="./assets/img/github.png" />
+      </a>
+      <a>What Movie ?</a>
+      <a>
+        <img className="github" src="./assets/img/github.png" />
+      </a>
     </router-link>
   </header>
   <main>
@@ -18,13 +24,13 @@
   // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-family: "Inter", sans-serif;
 
-  &::selection {
-    background: transparentize($color: #42b883, $amount: 0.5);
-  }
+  // &::selection {
+  //   background: transparentize($color: #42b883, $amount: 0.5);
+  // }
 }
 
 body {
-  background-color: #f0f3f5;
+  background-color: #f7f9fa;
 }
 
 a {
@@ -36,16 +42,38 @@ header {
   align-items: center;
   justify-content: center;
   padding: 10px 16px;
-  background-color: #2c3d4e;
+  background-color: #181829;
   box-shadow: 0 0 6 rgba(0, 0, 0, 0.1);
+  @media only screen and (max-width: 600px) {
+    .icon {
+      width: 6%;
+    }
+    .github {
+      width: 6%;
+    }
+  }
 }
 
 h1 {
-  color: #fff;
+  color: #f6c46a;
   font-size: 28px;
+}
 
-  span {
-    color: #42b883;
+.header {
+  a {
+    color: red;
   }
+}
+
+.icon {
+  width: 3%;
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  float: left;
+}
+.github {
+  width: 3%;
+  margin-right: 5px;
 }
 </style>

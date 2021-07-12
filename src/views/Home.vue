@@ -182,6 +182,7 @@ export default {
         .detail {
           background-color: #181829;
           padding: 16px 8px;
+          height: 100px;
           flex: 1 1 100%;
           border-radius: 0px 0px 8px 8px;
           .year {
