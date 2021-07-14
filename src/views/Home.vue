@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <div class="feature-card">
-      <router-link to="/movie/tt0409591">
-        <!-- <img
+      <!-- <router-link to="/movie/tt0409591"> -->
+      <!-- <img
           src="../assets/img/main_img.png"
           alt="Naruto Poster"
           class="featured-img"
         /> -->
-        <!-- <div class="detail">
+      <!-- <div class="detail">
           <h3>Naruto</h3>
           <p>
             Naruto Uzumaki, a mischievous adolescent ninja, struggles as he
@@ -15,13 +15,14 @@
             village's leader and strongest ninja.
           </p>
         </div> -->
-      </router-link>
+      <!-- </router-link> -->
     </div>
 
     <form @submit.prevent="SearchMovies()" class="search-box">
       <input
         type="text"
-        placeholder="What are you looking for?"
+        placeholder="&#xF002; What movie are you looking for?"
+        style="font-family:Inter, FontAwesome"
         v-model="search"
       />
       <input type="submit" value="Search" />
@@ -122,7 +123,9 @@ export default {
         margin-bottom: 15px;
         transition: 0.4s;
         &::placeholder {
-          color: #f6c56a6b;
+          color: #2c2c2c38;
+          font-size: 15px;
+          font-weight: 900;
         }
         &:focus {
           box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
@@ -131,15 +134,17 @@ export default {
       &[type="submit"] {
         width: 100%;
         max-width: 300px;
-        background-color: #181829;
+        background-color: #f6c46a;
         padding: 16px;
         border-radius: 8px;
-        color: #f6c46a;
+        color: #181829;
         font-size: 20px;
+        font-weight: 600;
         text-transform: uppercase;
         transition: 0.4s;
         &:active {
           background-color: #181829;
+          color: #f6c46a;
         }
       }
     }

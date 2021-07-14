@@ -51,7 +51,6 @@ export default {
 
   h2 {
     color: #181829;
-    // color: #F6C46A;
     font-size: 33px;
     font-weight: 900;
     margin-bottom: 16px;
